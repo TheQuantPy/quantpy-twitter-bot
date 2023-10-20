@@ -1,0 +1,102 @@
+| Number | Topic                          | Title                                                         |\
+|--------|--------------------------------|---------------------------------------------------------------|\
+| 1      | Time Value of Money            | "Unveiling the Magic of Compounding: Time Value of Money"    |\
+| 2      | Risk and Return                | "Playing the Odds: Understanding Risk and Return"            |\
+| 3      | Modern Portfolio Theory        | "Crafting the Perfect Portfolio: An Intro to MPT"            |\
+| 4      | Black-Scholes Model            | "The Black-Scholes Legacy: Revolutionizing Option Pricing"    |\
+| 5      | Multifactor Models             | "Beyond Beta: Exploring Multifactor Models"                  |\
+| 6      | Copula Models                  | "Bridging Dependencies: An Insight into Copula Models"       |\
+| 7      | Stochastic Calculus            | "The Dance of Chance: Delving into Stochastic Calculus"       |\
+| 8      | Ito\'92s Lemma                     | "Ito\'92s Insight: Unpacking Ito\'92s Lemma"                        |\
+| 9      | Quantitative Risk Management   | "Taming Uncertainty: Quantitative Risk Management Essentials" |\
+| 10     | Simple Moving Average Strategy | "Smooth Moves: SMA Trading Strategy Explained"               |\
+| 11     | Backtesting                          | "Rewinding The Market: The Art of Backtesting"                        |\
+| 12     | Transaction Costs and Slippage       | "The Hidden Costs: Navigating Transaction Costs and Slippage"         |\
+| 13     | Portfolio Optimization               | "Balancing Act: Portfolio Optimization Techniques"                    |\
+| 14     | QuantLib Introduction                | "Toolkit Talk: A Dive into QuantLib"                                  |\
+| 15     | Implementing Monte Carlo Simulations | "Rolling the Dice: Monte Carlo Simulations in Trading"                |\
+| 16     | Time Series Analysis                 | "Decoding Time: An Adventure into Time Series Analysis"               |\
+| 17     | Machine Learning in Finance          | "The Finance Algorithm: Machine Learning's Role"                      |\
+| 18     | Cryptocurrency Quant Strategies      | "Crypto Conundrums: Quant Strategies in Cryptocurrency Markets"      |\
+| 19     | High-frequency Trading Strategies    | "Milliseconds to Millions: High-frequency Trading Strategies"         |\
+| 20     | Market Anomalies Analysis            | "Bizarre Bazaars: Analyzing Market Anomalies"                         |\
+| 21     | Financial Crises Analysis         | "Crash Course: Analyzing Major Financial Crises"                    |\
+| 22     | Strategies of Quant Hedge Funds   | "Quantum Leaps: Strategies of Top Quant Hedge Funds"               |\
+| 23     | Zipline Library Introduction      | "Zipping Through Data: An Introduction to Zipline Library"         |\
+| 24     | Backtrader Library Introduction   | "Trade the Code: Getting Started with Backtrader"                  |\
+| 25     | Statsmodels Library Introduction  | "Modeling Market Mysteries with Statsmodels"                       |\
+| 26     | Interest Rate Models              | "Rate of Change: Diving into Interest Rate Models"                 |\
+| 27     | Credit Risk Models                | "Credit Where It's Due: Unveiling Credit Risk Models"              |\
+| 28     | Derivative Pricing                | "Price Tag on Risk: The World of Derivative Pricing"               |\
+| 29     | Option Pricing                    | "Options Unveiled: The Pricing Paradigm"                            |\
+| 30     | Volatility Forecasting            | "Predicting Pandemonium: Volatility Forecasting Techniques"        |\
+| 31     | Arbitrage Pricing Theory          | "Free Lunch? Unpacking Arbitrage Pricing Theory"                   |\
+| 32     | Behavioral Finance                | "Mind Over Markets: A Look into Behavioral Finance"                |\
+| 33     | Equity Quant Strategies           | "Stocks and Quants: Equity Quantitative Strategies"                |\
+| 34     | Fixed Income Quant Strategies     | "Bonding with Quant: Fixed Income Quantitative Strategies"         |\
+| 35     | Commodities Quant Strategies      | "Golden Opportunities: Commodities Quantitative Strategies"        |\
+| 36     | Forex Quant Strategies            | "Currency Code: Forex Quantitative Strategies"                     |\
+| 37     | Asset Allocation Strategies       | "The Allocation Equation: Asset Allocation Strategies"             |\
+| 38     | Liquidity Risk Management         | "Liquid or Illiquid? Navigating Liquidity Risk"                    |\
+| 39     | Performance Measurement           | "Measuring Mastery: Performance Measurement in Quant Finance"      |\
+| 40     | Hedge Fund Structure and Strategies| "Hedge Fund Hierarchy: Structure and Strategies Uncovered"   |\
+| 41     | Asset Pricing Models            | "Valuing Varieties: A Look at Asset Pricing Models"             |\
+| 42     | Market Microstructure          | "Market Mosaic: Delving into Market Microstructure"            |\
+| 43     | Algorithmic Trading Risks      | "Algo Angst: Navigating Risks in Algorithmic Trading"          |\
+| 44     | Regulatory Environment         | "Rulebook of the Ruled: Understanding Financial Regulation"    |\
+| 45     | Portfolio Performance Analysis  | "Portfolio's Proof: Delving into Performance Analysis"         |\
+| 46     | Value at Risk (VaR)            | "VaR's Vantage: Unpacking Value at Risk"                       |\
+| 47     | Stress Testing                 | "Financial Fitness: The Essence of Stress Testing"             |\
+| 48     | Exotic Options Pricing         | "Beyond Vanilla: Pricing Exotic Options"                        |\
+| 49     | Sentiment Analysis in Finance  | "Feel the Market's Pulse: Sentiment Analysis Unveiled"         |\
+| 50     | Systematic Trading Strategies  | "Systematic Success: Exploring Systematic Trading Strategies"  |\
+| 51     | Trading Psychology             | "Mind over Markets: Unpacking Trading Psychology"              |\
+| 52     | Alternative Data in Finance    | "Alt Data Alchemy: The New Gold in Finance"                    |\
+| 53     | ETF Trading Strategies         | "ETF Expeditions: Unveiling Trading Strategies"                |\
+| 54     | Quantitative Model Validation  | "Model Marvel or Mirage: The Art of Quant Model Validation"    |\
+| 55     | Factor Investing               | "Factor Feast: Diving into Factor Investing"                   |\
+| 56     | Futures and Forwards           | "Future-Forward Finance: Exploring Futures and Forwards"       |\
+| 57     | Swap Contracts                 | "Switcheroo: Unraveling Swap Contracts"                        |\
+| 58     | Risk Parity Strategies         | "Balancing Act: Delving into Risk Parity Strategies"           |\
+| 59     | Technical Analysis             | "Charting the Course: Technical Analysis Techniques"           |\
+| 60     | Event-Driven Trading Strategies| "Eventful Earnings: Mastering Event-Driven Trading Strategies" |\
+| 61     | Fundamental Analysis                   | "Beyond Numbers: The Essence of Fundamental Analysis"               |\
+| 62     | Statistical Arbitrage                  | "Statistical Stakes: A Dive into Statistical Arbitrage"             |\
+| 63     | Portfolio Construction                 | "Building Financial Fortresses: Portfolio Construction Essentials"  |\
+| 64     | High-Frequency Trading Technology      | "Speed Demons: Tech Behind High-Frequency Trading"                  |\
+| 65     | Momentum Trading Strategies            | "Momentum Mysteries: Unveiling Momentum Trading Strategies"         |\
+| 66     | Market Making Strategies               | "Market Maestro: Mastering Market Making Strategies"                |\
+| 67     | Pairs Trading                          | "Twins of Trade: Pairs Trading Explained"                           |\
+| 68     | Machine Learning Algorithm Tuning      | "Tuning the Financial Tune: ML Algorithm Tuning in Finance"         |\
+| 69     | Neural Networks in Finance             | "Financial Foresight: Neural Networks in Action"                    |\
+| 70     | Reinforcement Learning in Trading      | "Rewarding Routines: Reinforcement Learning in Trading"             |\
+| 71     | Blockchain Technology                  | "Block by Block: Unpacking Blockchain Technology"                   |\
+| 72     | Smart Contracts                        | "Contractual Clarity: Delving into Smart Contracts"                 |\
+| 73     | Quantitative Easing Impact             | "Easing into Economics: Impact of Quantitative Easing"              |\
+| 74     | Inflation Hedging Strategies           | "Inflation Insulation: Hedging Strategies Explored"                 |\
+| 75     | Central Bank Policies                  | "Banking on Policy: Unpacking Central Bank Moves"                   |\
+| 76     | Financial Data Cleaning and Processing | "Data Detox: Cleaning and Processing Financial Data"                 |\
+| 77     | Quantitative Finance Career Paths      | "Quant Quest: Exploring Career Paths in Quantitative Finance"       |\
+| 78     | Real-world Quantitative Finance Projects| "From Theory to Thriving: Real-world Quant Projects"                 |\
+| 79     | Financial Ethics and Compliance        | "Ethical Earnings: Finance Ethics and Compliance"                   |\
+| 80     | Trading Platform Development           | "Platform Power-play: Developing Your Trading Platform"             |\
+| 81     | Python Libraries for Finance        | "Library Lore: Python Libraries Every Quant Should Know"       |\
+| 82     | Order Book Dynamics                 | "Booked on Books: Understanding Order Book Dynamics"          |\
+| 83     | Derivatives Hedging Strategies      | "Derivative Defenses: Mastering Hedging Strategies"           |\
+| 84     | Quantitative Finance Interviews Prep| "Quant Quizzing: Acing Quantitative Finance Interviews"       |\
+| 85     | Financial Networks Analysis         | "Network of Net-worth: Unveiling Financial Networks"          |\
+| 86     | Market Impact Models                | "Impactful Insights: Delving into Market Impact Models"       |\
+| 87     | Trading Signal Generation           | "Signal Success: Generating and Evaluating Trading Signals"   |\
+| 88     | Latency in Trading Systems          | "Latent Lessons: The Role of Latency in Trading Systems"      |\
+| 89     | Market Anomalies Exploitation       | "Anomalous Achievements: Exploiting Market Anomalies"         |\
+| 90     | Trading System Evaluation           | "Systematic Scrutiny: Evaluating Trading Systems"             |\
+| 91     | Credit Derivatives                  | "Credit Chronicles: An Overview of Credit Derivatives"        |\
+| 92     | Sentiment-Driven Trading Strategies | "Sentimental Journeys: Trading on Market Mood"                |\
+| 93     | Survival Analysis in Finance        | "Survival of the Fittest: Applying Survival Analysis"          |\
+| 94     | Seasonality Effects in Markets      | "Seasonal Strategies: Navigating Market Seasonality"          |\
+| 95     | Liquidity Provision Strategies      | "Liquid Logic: Mastering Liquidity Provision Strategies"      |\
+| 96     | Game Theory in Finance              | "Financial Foresight: Game Theory in Action"                  |\
+| 97     | Real Estate Quantitative Analysis   | "Realty Reality: Quantitative Analysis in Real Estate"        |\
+| 98     | Trading Infrastructure Development  | "Infrastucture Insights: Building Robust Trading Systems"     |\
+| 99     | Financial Data Visualization        | "Visual Wealth: Financial Data Visualization Techniques"      |\
+| 100    | High-Frequency Trading              | "The Need for Speed: Inside High-Frequency Trading"            |\
