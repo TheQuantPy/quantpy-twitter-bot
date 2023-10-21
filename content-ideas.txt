@@ -7,7 +7,7 @@
 | 5      | Multifactor Models             | "Beyond Beta: Exploring Multifactor Models"                  |\
 | 6      | Copula Models                  | "Bridging Dependencies: An Insight into Copula Models"       |\
 | 7      | Stochastic Calculus            | "The Dance of Chance: Delving into Stochastic Calculus"       |\
-| 8      | Ito\'92s Lemma                     | "Ito\'92s Insight: Unpacking Ito\'92s Lemma"                        |\
+| 8      | Ito's Lemma                     | "Ito's Insight: Unpacking Ito's Lemma"                        |\
 | 9      | Quantitative Risk Management   | "Taming Uncertainty: Quantitative Risk Management Essentials" |\
 | 10     | Simple Moving Average Strategy | "Smooth Moves: SMA Trading Strategy Explained"               |\
 | 11     | Backtesting                          | "Rewinding The Market: The Art of Backtesting"                        |\
