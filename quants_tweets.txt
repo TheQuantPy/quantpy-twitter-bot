@@ -1,100 +1,100 @@
-1|Time Value of Money|Unveiling the Magic of Compounding: Time Value of Money|FALSE|
-2|Risk and Return|Playing the Odds: Understanding Risk and Return|FALSE|
-3|Modern Portfolio Theory|Crafting the Perfect Portfolio: An Intro to MPT|FALSE|
-4|Black-Scholes Model|The Black-Scholes Legacy: Revolutionizing Option Pricing|FALSE|
-5|Multifactor Models|Beyond Beta: Exploring Multifactor Models|FALSE|
-6|Copula Models|Bridging Dependencies: An Insight into Copula Models|FALSE|
-7|Stochastic Calculus|The Dance of Chance: Delving into Stochastic Calculus|FALSE|
-8|Ito's Lemma|Ito's Insight: Unpacking Ito's Lemma|FALSE|
-9|Quantitative Risk Management|Taming Uncertainty: Quantitative Risk Management Essentials|FALSE|
-10|Simple Moving Average Strategy|Smooth Moves: SMA Trading Strategy Explained|FALSE|
-11|Backtesting|Rewinding The Market: The Art of Backtesting|FALSE|
-12|Transaction Costs and Slippage|The Hidden Costs: Navigating Transaction Costs and Slippage|FALSE|
-13|Portfolio Optimization|Balancing Act: Portfolio Optimization Techniques|FALSE|
-14|QuantLib Introduction|Toolkit Talk: A Dive into QuantLib|FALSE|
-15|Implementing Monte Carlo Simulations|Rolling the Dice: Monte Carlo Simulations in Trading|FALSE|
-16|Time Series Analysis|Decoding Time: An Adventure into Time Series Analysis|FALSE|
-17|Machine Learning in Finance|The Finance Algorithm: Machine Learning's Role|FALSE|
-18|Cryptocurrency Quant Strategies|Crypto Conundrums: Quant Strategies in Cryptocurrency Markets|FALSE|
-19|High-frequency Trading Strategies|Milliseconds to Millions: High-frequency Trading Strategies|FALSE|
-20|Market Anomalies Analysis|Bizarre Bazaars: Analyzing Market Anomalies|FALSE|
-21|Financial Crises Analysis|Crash Course: Analyzing Major Financial Crises|FALSE|
-22|Strategies of Quant Hedge Funds|Quantum Leaps: Strategies of Top Quant Hedge Funds|FALSE|
-23|Zipline Library Introduction|Zipping Through Data: An Introduction to Zipline Library|FALSE|
-24|Backtrader Library Introduction|Trade the Code: Getting Started with Backtrader|FALSE|
-25|Statsmodels Library Introduction|Modeling Market Mysteries with Statsmodels|FALSE|
-26|Interest Rate Models|Rate of Change: Diving into Interest Rate Models|FALSE|
-27|Credit Risk Models|Credit Where It's Due: Unveiling Credit Risk Models|FALSE|
-28|Derivative Pricing|Price Tag on Risk: The World of Derivative Pricing|FALSE|
-29|Option Pricing|Options Unveiled: The Pricing Paradigm|FALSE|
-30|Volatility Forecasting|Predicting Pandemonium: Volatility Forecasting Techniques|FALSE|
-31|Arbitrage Pricing Theory|Free Lunch? Unpacking Arbitrage Pricing Theory|FALSE|
-32|Behavioral Finance|Mind Over Markets: A Look into Behavioral Finance|FALSE|
-33|Equity Quant Strategies|Stocks and Quants: Equity Quantitative Strategies|FALSE|
-34|Fixed Income Quant Strategies|Bonding with Quant: Fixed Income Quantitative Strategies|FALSE|
-35|Commodities Quant Strategies|Golden Opportunities: Commodities Quantitative Strategies|FALSE|
-36|Forex Quant Strategies|Currency Code: Forex Quantitative Strategies|FALSE|
-37|Asset Allocation Strategies|The Allocation Equation: Asset Allocation Strategies|FALSE|
-38|Liquidity Risk Management|Liquid or Illiquid? Navigating Liquidity Risk|FALSE|
-39|Performance Measurement|Measuring Mastery: Performance Measurement in Quant Finance|FALSE|
-40|Hedge Fund Structure and Strategies|Hedge Fund Hierarchy: Structure and Strategies Uncovered|FALSE|
-41|Asset Pricing Models|Valuing Varieties: A Look at Asset Pricing Models|FALSE|
-42|Market Microstructure|Market Mosaic: Delving into Market Microstructure|FALSE|
-43|Algorithmic Trading Risks|Algo Angst: Navigating Risks in Algorithmic Trading|FALSE|
-44|Regulatory Environment|Rulebook of the Ruled: Understanding Financial Regulation|FALSE|
-45|Portfolio Performance Analysis|Portfolio's Proof: Delving into Performance Analysis|FALSE|
-46|Value at Risk (VaR)|VaR's Vantage: Unpacking Value at Risk|FALSE|
-47|Stress Testing|Financial Fitness: The Essence of Stress Testing|FALSE|
-48|Exotic Options Pricing|Beyond Vanilla: Pricing Exotic Options|FALSE|
-49|Sentiment Analysis in Finance|Feel the Market's Pulse: Sentiment Analysis Unveiled|FALSE|
-50|Systematic Trading Strategies|Systematic Success: Exploring Systematic Trading Strategies|FALSE|
-51|Trading Psychology|Mind over Markets: Unpacking Trading Psychology|FALSE|
-52|Alternative Data in Finance|Alt Data Alchemy: The New Gold in Finance|FALSE|
-53|ETF Trading Strategies|ETF Expeditions: Unveiling Trading Strategies|FALSE|
-54|Quantitative Model Validation|Model Marvel or Mirage: The Art of Quant Model Validation|FALSE|
-55|Factor Investing|Factor Feast: Diving into Factor Investing|FALSE|
-56|Futures and Forwards|Future-Forward Finance: Exploring Futures and Forwards|FALSE|
-57|Swap Contracts|Switcheroo: Unraveling Swap Contracts|FALSE|
-58|Risk Parity Strategies|Balancing Act: Delving into Risk Parity Strategies|FALSE|
-59|Technical Analysis|Charting the Course: Technical Analysis Techniques|FALSE|
-60|Event-Driven Trading Strategies|Eventful Earnings: Mastering Event-Driven Trading Strategies|FALSE|
-61|Fundamental Analysis|Beyond Numbers: The Essence of Fundamental Analysis|FALSE|
-62|Statistical Arbitrage|Statistical Stakes: A Dive into Statistical Arbitrage|FALSE|
-63|Portfolio Construction|Building Financial Fortresses: Portfolio Construction Essentials|FALSE|
-64|High-Frequency Trading Technology|Speed Demons: Tech Behind High-Frequency Trading|FALSE|
-65|Momentum Trading Strategies|Momentum Mysteries: Unveiling Momentum Trading Strategies|FALSE|
-66|Market Making Strategies|Market Maestro: Mastering Market Making Strategies|FALSE|
-67|Pairs Trading|Twins of Trade: Pairs Trading Explained|FALSE|
-68|Machine Learning Algorithm Tuning|Tuning the Financial Tune: ML Algorithm Tuning in Finance|FALSE|
-69|Neural Networks in Finance|Financial Foresight: Neural Networks in Action|FALSE|
-70|Reinforcement Learning in Trading|Rewarding Routines: Reinforcement Learning in Trading|FALSE|
-71|Blockchain Technology|Block by Block: Unpacking Blockchain Technology|FALSE|
-72|Smart Contracts|Contractual Clarity: Delving into Smart Contracts|FALSE|
-73|Quantitative Easing Impact|Easing into Economics: Impact of Quantitative Easing|FALSE|
-74|Inflation Hedging Strategies|Inflation Insulation: Hedging Strategies Explored|FALSE|
-75|Central Bank Policies|Banking on Policy: Unpacking Central Bank Moves|FALSE|
-76|Financial Data Cleaning and Processing|Data Detox: Cleaning and Processing Financial Data|FALSE|
-77|Quantitative Finance Career Paths|Quant Quest: Exploring Career Paths in Quantitative Finance|FALSE|
-78|Real-world Quantitative Finance Projects|From Theory to Thriving: Real-world Quant Projects|FALSE|
-79|Financial Ethics and Compliance|Ethical Earnings: Finance Ethics and Compliance|FALSE|
-80|Trading Platform Development|Platform Power-play: Developing Your Trading Platform|FALSE|
-81|Python Libraries for Finance|Library Lore: Python Libraries Every Quant Should Know|FALSE|
-82|Order Book Dynamics|Booked on Books: Understanding Order Book Dynamics|FALSE|
-83|Derivatives Hedging Strategies|Derivative Defenses: Mastering Hedging Strategies|FALSE|
-84|Quantitative Finance Interviews Prep|Quant Quizzing: Acing Quantitative Finance Interviews|FALSE|
-85|Financial Networks Analysis|Network of Net-worth: Unveiling Financial Networks|FALSE|
-86|Market Impact Models|Impactful Insights: Delving into Market Impact Models|FALSE|
-87|Trading Signal Generation|Signal Success: Generating and Evaluating Trading Signals|FALSE|
-88|Latency in Trading Systems|Latent Lessons: The Role of Latency in Trading Systems|FALSE|
-89|Market Anomalies Exploitation|Anomalous Achievements: Exploiting Market Anomalies|FALSE|
-90|Trading System Evaluation|Systematic Scrutiny: Evaluating Trading Systems|FALSE|
-91|Credit Derivatives|Credit Chronicles: An Overview of Credit Derivatives|FALSE|
-92|Sentiment-Driven Trading Strategies|Sentimental Journeys: Trading on Market Mood|FALSE|
-93|Survival Analysis in Finance|Survival of the Fittest: Applying Survival Analysis|FALSE|
-94|Seasonality Effects in Markets|Seasonal Strategies: Navigating Market Seasonality|FALSE|
-95|Liquidity Provision Strategies|Liquid Logic: Mastering Liquidity Provision Strategies|FALSE|
-96|Game Theory in Finance|Financial Foresight: Game Theory in Action|FALSE|
-97|Real Estate Quantitative Analysis|Realty Reality: Quantitative Analysis in Real Estate|FALSE|
-98|Trading Infrastructure Development|Infrastucture Insights: Building Robust Trading Systems|FALSE|
-99|Financial Data Visualization|Visual Wealth: Financial Data Visualization Techniques|FALSE|
-100|High-Frequency Trading|The Need for Speed: Inside High-Frequency Trading|FALSE|
+1|Time Value of Money|Unveiling the Magic of Compounding: Time Value of Money|FALSE|FALSE|FALSE|
+2|Risk and Return|Playing the Odds: Understanding Risk and Return|FALSE|FALSE|FALSE|
+3|Modern Portfolio Theory|Crafting the Perfect Portfolio: An Intro to MPT|FALSE|FALSE|FALSE|
+4|Black-Scholes Model|The Black-Scholes Legacy: Revolutionizing Option Pricing|FALSE|FALSE|FALSE|
+5|Multifactor Models|Beyond Beta: Exploring Multifactor Models|FALSE|FALSE|FALSE|
+6|Copula Models|Bridging Dependencies: An Insight into Copula Models|FALSE|FALSE|FALSE|
+7|Stochastic Calculus|The Dance of Chance: Delving into Stochastic Calculus|FALSE|FALSE|FALSE|
+8|Ito's Lemma|Ito's Insight: Unpacking Ito's Lemma|FALSE|FALSE|FALSE|
+9|Quantitative Risk Management|Taming Uncertainty: Quantitative Risk Management Essentials|FALSE|FALSE|FALSE|
+10|Simple Moving Average Strategy|Smooth Moves: SMA Trading Strategy Explained|FALSE|FALSE|FALSE|
+11|Backtesting|Rewinding The Market: The Art of Backtesting|FALSE|FALSE|FALSE|
+12|Transaction Costs and Slippage|The Hidden Costs: Navigating Transaction Costs and Slippage|FALSE|FALSE|FALSE|
+13|Portfolio Optimization|Balancing Act: Portfolio Optimization Techniques|FALSE|FALSE|FALSE|
+14|QuantLib Introduction|Toolkit Talk: A Dive into QuantLib|FALSE|FALSE|FALSE|
+15|Implementing Monte Carlo Simulations|Rolling the Dice: Monte Carlo Simulations in Trading|FALSE|FALSE|FALSE|
+16|Time Series Analysis|Decoding Time: An Adventure into Time Series Analysis|FALSE|FALSE|FALSE|
+17|Machine Learning in Finance|The Finance Algorithm: Machine Learning's Role|FALSE|FALSE|FALSE|
+18|Cryptocurrency Quant Strategies|Crypto Conundrums: Quant Strategies in Cryptocurrency Markets|FALSE|FALSE|FALSE|
+19|High-frequency Trading Strategies|Milliseconds to Millions: High-frequency Trading Strategies|FALSE|FALSE|FALSE|
+20|Market Anomalies Analysis|Bizarre Bazaars: Analyzing Market Anomalies|FALSE|FALSE|FALSE|
+21|Financial Crises Analysis|Crash Course: Analyzing Major Financial Crises|FALSE|FALSE|FALSE|
+22|Strategies of Quant Hedge Funds|Quantum Leaps: Strategies of Top Quant Hedge Funds|FALSE|FALSE|FALSE|
+23|Zipline Library Introduction|Zipping Through Data: An Introduction to Zipline Library|FALSE|FALSE|FALSE|
+24|Backtrader Library Introduction|Trade the Code: Getting Started with Backtrader|FALSE|FALSE|FALSE|
+25|Statsmodels Library Introduction|Modeling Market Mysteries with Statsmodels|FALSE|FALSE|FALSE|
+26|Interest Rate Models|Rate of Change: Diving into Interest Rate Models|FALSE|FALSE|FALSE|
+27|Credit Risk Models|Credit Where It's Due: Unveiling Credit Risk Models|FALSE|FALSE|FALSE|
+28|Derivative Pricing|Price Tag on Risk: The World of Derivative Pricing|FALSE|FALSE|FALSE|
+29|Option Pricing|Options Unveiled: The Pricing Paradigm|FALSE|FALSE|FALSE|
+30|Volatility Forecasting|Predicting Pandemonium: Volatility Forecasting Techniques|FALSE|FALSE|FALSE|
+31|Arbitrage Pricing Theory|Free Lunch? Unpacking Arbitrage Pricing Theory|FALSE|FALSE|FALSE|
+32|Behavioral Finance|Mind Over Markets: A Look into Behavioral Finance|FALSE|FALSE|FALSE|
+33|Equity Quant Strategies|Stocks and Quants: Equity Quantitative Strategies|FALSE|FALSE|FALSE|
+34|Fixed Income Quant Strategies|Bonding with Quant: Fixed Income Quantitative Strategies|FALSE|FALSE|FALSE|
+35|Commodities Quant Strategies|Golden Opportunities: Commodities Quantitative Strategies|FALSE|FALSE|FALSE|
+36|Forex Quant Strategies|Currency Code: Forex Quantitative Strategies|FALSE|FALSE|FALSE|
+37|Asset Allocation Strategies|The Allocation Equation: Asset Allocation Strategies|FALSE|FALSE|FALSE|
+38|Liquidity Risk Management|Liquid or Illiquid? Navigating Liquidity Risk|FALSE|FALSE|FALSE|
+39|Performance Measurement|Measuring Mastery: Performance Measurement in Quant Finance|FALSE|FALSE|FALSE|
+40|Hedge Fund Structure and Strategies|Hedge Fund Hierarchy: Structure and Strategies Uncovered|FALSE|FALSE|FALSE|
+41|Asset Pricing Models|Valuing Varieties: A Look at Asset Pricing Models|FALSE|FALSE|FALSE|
+42|Market Microstructure|Market Mosaic: Delving into Market Microstructure|FALSE|FALSE|FALSE|
+43|Algorithmic Trading Risks|Algo Angst: Navigating Risks in Algorithmic Trading|FALSE|FALSE|FALSE|
+44|Regulatory Environment|Rulebook of the Ruled: Understanding Financial Regulation|FALSE|FALSE|FALSE|
+45|Portfolio Performance Analysis|Portfolio's Proof: Delving into Performance Analysis|FALSE|FALSE|FALSE|
+46|Value at Risk (VaR)|VaR's Vantage: Unpacking Value at Risk|FALSE|FALSE|FALSE|
+47|Stress Testing|Financial Fitness: The Essence of Stress Testing|FALSE|FALSE|FALSE|
+48|Exotic Options Pricing|Beyond Vanilla: Pricing Exotic Options|FALSE|FALSE|FALSE|
+49|Sentiment Analysis in Finance|Feel the Market's Pulse: Sentiment Analysis Unveiled|FALSE|FALSE|FALSE|
+50|Systematic Trading Strategies|Systematic Success: Exploring Systematic Trading Strategies|FALSE|FALSE|FALSE|
+51|Trading Psychology|Mind over Markets: Unpacking Trading Psychology|FALSE|FALSE|FALSE|
+52|Alternative Data in Finance|Alt Data Alchemy: The New Gold in Finance|FALSE|FALSE|FALSE|
+53|ETF Trading Strategies|ETF Expeditions: Unveiling Trading Strategies|FALSE|FALSE|FALSE|
+54|Quantitative Model Validation|Model Marvel or Mirage: The Art of Quant Model Validation|FALSE|FALSE|FALSE|
+55|Factor Investing|Factor Feast: Diving into Factor Investing|FALSE|FALSE|FALSE|
+56|Futures and Forwards|Future-Forward Finance: Exploring Futures and Forwards|FALSE|FALSE|FALSE|
+57|Swap Contracts|Switcheroo: Unraveling Swap Contracts|FALSE|FALSE|FALSE|
+58|Risk Parity Strategies|Balancing Act: Delving into Risk Parity Strategies|FALSE|FALSE|FALSE|
+59|Technical Analysis|Charting the Course: Technical Analysis Techniques|FALSE|FALSE|FALSE|
+60|Event-Driven Trading Strategies|Eventful Earnings: Mastering Event-Driven Trading Strategies|FALSE|FALSE|FALSE|
+61|Fundamental Analysis|Beyond Numbers: The Essence of Fundamental Analysis|FALSE|FALSE|FALSE|
+62|Statistical Arbitrage|Statistical Stakes: A Dive into Statistical Arbitrage|FALSE|FALSE|FALSE|
+63|Portfolio Construction|Building Financial Fortresses: Portfolio Construction Essentials|FALSE|FALSE|FALSE|
+64|High-Frequency Trading Technology|Speed Demons: Tech Behind High-Frequency Trading|FALSE|FALSE|FALSE|
+65|Momentum Trading Strategies|Momentum Mysteries: Unveiling Momentum Trading Strategies|FALSE|FALSE|FALSE|
+66|Market Making Strategies|Market Maestro: Mastering Market Making Strategies|FALSE|FALSE|FALSE|
+67|Pairs Trading|Twins of Trade: Pairs Trading Explained|FALSE|FALSE|FALSE|
+68|Machine Learning Algorithm Tuning|Tuning the Financial Tune: ML Algorithm Tuning in Finance|FALSE|FALSE|FALSE|
+69|Neural Networks in Finance|Financial Foresight: Neural Networks in Action|FALSE|FALSE|FALSE|
+70|Reinforcement Learning in Trading|Rewarding Routines: Reinforcement Learning in Trading|FALSE|FALSE|FALSE|
+71|Blockchain Technology|Block by Block: Unpacking Blockchain Technology|FALSE|FALSE|FALSE|
+72|Smart Contracts|Contractual Clarity: Delving into Smart Contracts|FALSE|FALSE|FALSE|
+73|Quantitative Easing Impact|Easing into Economics: Impact of Quantitative Easing|FALSE|FALSE|FALSE|
+74|Inflation Hedging Strategies|Inflation Insulation: Hedging Strategies Explored|FALSE|FALSE|FALSE|
+75|Central Bank Policies|Banking on Policy: Unpacking Central Bank Moves|FALSE|FALSE|FALSE|
+76|Financial Data Cleaning and Processing|Data Detox: Cleaning and Processing Financial Data|FALSE|FALSE|FALSE|
+77|Quantitative Finance Career Paths|Quant Quest: Exploring Career Paths in Quantitative Finance|FALSE|FALSE|FALSE|
+78|Real-world Quantitative Finance Projects|From Theory to Thriving: Real-world Quant Projects|FALSE|FALSE|FALSE|
+79|Financial Ethics and Compliance|Ethical Earnings: Finance Ethics and Compliance|FALSE|FALSE|FALSE|
+80|Trading Platform Development|Platform Power-play: Developing Your Trading Platform|FALSE|FALSE|FALSE|
+81|Python Libraries for Finance|Library Lore: Python Libraries Every Quant Should Know|FALSE|FALSE|FALSE|
+82|Order Book Dynamics|Booked on Books: Understanding Order Book Dynamics|FALSE|FALSE|FALSE|
+83|Derivatives Hedging Strategies|Derivative Defenses: Mastering Hedging Strategies|FALSE|FALSE|FALSE|
+84|Quantitative Finance Interviews Prep|Quant Quizzing: Acing Quantitative Finance Interviews|FALSE|FALSE|FALSE|
+85|Financial Networks Analysis|Network of Net-worth: Unveiling Financial Networks|FALSE|FALSE|FALSE|
+86|Market Impact Models|Impactful Insights: Delving into Market Impact Models|FALSE|FALSE|FALSE|
+87|Trading Signal Generation|Signal Success: Generating and Evaluating Trading Signals|FALSE|FALSE|FALSE|
+88|Latency in Trading Systems|Latent Lessons: The Role of Latency in Trading Systems|FALSE|FALSE|FALSE|
+89|Market Anomalies Exploitation|Anomalous Achievements: Exploiting Market Anomalies|FALSE|FALSE|FALSE|
+90|Trading System Evaluation|Systematic Scrutiny: Evaluating Trading Systems|FALSE|FALSE|FALSE|
+91|Credit Derivatives|Credit Chronicles: An Overview of Credit Derivatives|FALSE|FALSE|FALSE|
+92|Sentiment-Driven Trading Strategies|Sentimental Journeys: Trading on Market Mood|FALSE|FALSE|FALSE|
+93|Survival Analysis in Finance|Survival of the Fittest: Applying Survival Analysis|FALSE|FALSE|FALSE|
+94|Seasonality Effects in Markets|Seasonal Strategies: Navigating Market Seasonality|FALSE|FALSE|FALSE|
+95|Liquidity Provision Strategies|Liquid Logic: Mastering Liquidity Provision Strategies|FALSE|FALSE|FALSE|
+96|Game Theory in Finance|Financial Foresight: Game Theory in Action|FALSE|FALSE|FALSE|
+97|Real Estate Quantitative Analysis|Realty Reality: Quantitative Analysis in Real Estate|FALSE|FALSE|FALSE|
+98|Trading Infrastructure Development|Infrastucture Insights: Building Robust Trading Systems|FALSE|FALSE|FALSE|
+99|Financial Data Visualization|Visual Wealth: Financial Data Visualization Techniques|FALSE|FALSE|FALSE|
+100|High-Frequency Trading|The Need for Speed: Inside High-Frequency Trading|FALSE|FALSE|FALSE|
