@@ -1,16 +1,20 @@
 import os
 import tweepy
 import logging
-from dataclasses import dataclass, asdict
-from twitter import Tweet, TweetQueue
+from dataclasses import asdict
 from langchain.chat_models import ChatOpenAI
-
-# import generate_tweet
-from process_tweets import generate_tweets, search_next_tweet
+import quantpy_feed.call_openai
+from quantpy_feed.twitter import Boolean, Tweet, TweetType, TweetQueue
+from quantpy_feed.process_tweets import generate_tweets, search_next_tweet
 
 # Helpful when testing locally
 from dotenv import load_dotenv
 load_dotenv()
+
+# Setting Variables
+TWEET_TYPE = TweetType.THREAD
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+TEXT_FILE = os.path.join(CUR_DIR, 'data/processed/quants_tweets.txt')
 
 # Load your Twitter and Airtable API keys (preferably from environment variables, config file, or within the railyway app)
 TWITTER_API_KEY = os.getenv("TWITTER_API_KEY")
@@ -28,7 +32,7 @@ logging.basicConfig(
     format="%(asctime)s %(name)-12s %(levelname)-8s %(message)s",
     datefmt="%y-%m-%d %H:%M",
     filename="twitter-bot.log",
-    filemode="w",
+    filemode="a",
 )
 
 # TwitterBot class to help us organize our code and manage shared state
@@ -47,9 +51,13 @@ class TwitterBot:
             model_name="gpt-3.5-turbo-0613",
         )
 
-        self.text_file = "quants_tweets.txt"
+        self.text_file = TEXT_FILE
 
         self.tweetQueue = TweetQueue.from_text_file(self.text_file)
+
+    def verify_tweet_to_send(self) -> None:
+        if len(self.tweetQueue.tweets_ready_for_sending) == 0:
+            self.process_tweets()
 
     def process_tweets(self):
         generate_tweets(self.llm, self.tweetQueue)
@@ -62,29 +70,52 @@ class TwitterBot:
         
     def post_thread(self, tweet: Tweet) -> None:
         tweet_d = asdict(tweet)
-        for key, tweet_thread in tweet_d.items():
-            if key == 'Hook':
-                _tweet_thread = self.twitter_api.update_status(status=tweet_thread)
-            else:
-                self.reply_tweet(original_tweet_id=_last_tweet_id.id,
-                                 tweet_reply=tweet_thread)
-
-            _last_tweet_id = _tweet_thread
-
-    def post_tweet(self) -> None:
-        if len(self.tweetQueue.tweets_ready_for_sending) == 0:
-            self.process_tweets()
-
-        quant_track = search_next_tweet(self.tweetQueue)
-        quant_tweet = quant_track.tweet.to_text()
-        print(quant_tweet)
         try:
-            response_tweet = self.twitter_api.create_tweet(text=quant_tweet)
+            for key, tweet_thread in tweet_d.items():
+                if key == 'Hook':
+                    _tweet_thread = self.twitter_api.create_tweet(text=tweet_thread)
+                else:
+                    self.twitter_api.create_tweet(
+                                    text=tweet_thread,
+                                    in_reply_to_tweet_id=_last_tweet_id.data['id']
+                                    )
+                _last_tweet_id = _tweet_thread
+                logging.info('Sent Status: TRUE. Tweet: {tweet_thread}')
+            return True
         except Exception as e:
             logging.warning(e)
+            return False
+
+    def post_tweet(self, tweet: Tweet) -> None:
+        quant_tweet = tweet.to_text()
+        try:
+            self.twitter_api.create_tweet(text=quant_tweet)
+            logging.info('Sent Status: TRUE. Tweet: {quant_tweet}')
+            return True
+        except Exception as e:
+            logging.warning(e)
+            return False
+        
+    def save_file(self):
+        self.tweetQueue.to_text_file(self.text_file)
+        logging.info("Latest version of tweets saved down.")
 
 if __name__ == "__main__":
     # First step is to import file of topics and ides into TweetQueue
     twitterBot = TwitterBot()
-    # twitterBot.process_tweets()
-    twitterBot.post_tweet()
+    # ensure there are tweets to send
+    twitterBot.verify_tweet_to_send()
+    # Identify Tweet Track to Send
+    quant_track = search_next_tweet(twitterBot.tweetQueue)
+    # post single tweet
+    if TWEET_TYPE == TweetType.SINGLE:
+        if twitterBot.post_tweet(tweet = quant_track.tweet):
+            quant_track.sent_status = Boolean.TRUE
+    # post tweet thread
+    elif TWEET_TYPE == TweetType.THREAD:
+        # if twitterBot.post_thread(tweet = quant_track.tweet):
+        #     quant_track.sent_status = Boolean.TRUE
+        print(quant_track.tweet)
+    # save down file
+    twitterBot.save_file()
+

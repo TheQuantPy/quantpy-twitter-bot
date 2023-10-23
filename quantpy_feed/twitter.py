@@ -1,4 +1,4 @@
-from enum import Flag
+from enum import Flag, auto
 from json import dumps, loads
 from dataclasses import dataclass, asdict, field
 
@@ -6,6 +6,9 @@ class Boolean(Flag):
     TRUE = True
     FALSE = False
 
+class TweetType(Flag):
+    SINGLE = auto()
+    THREAD = auto()
 
 @dataclass
 class Tweet:

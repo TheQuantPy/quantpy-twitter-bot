@@ -3,21 +3,35 @@ import re
 import time
 import logging
 from dotenv import load_dotenv
-from call_openai import generate_response
 from langchain.chat_models import ChatOpenAI
-from twitter import TweetQueue, Tweet, Boolean
+
+if __name__ == "__main__":
+    # module being called directly, use absolute path
+    from call_openai import generate_response
+    from twitter import TweetQueue, Tweet, Boolean
+
+else:
+    # module being called as package, use relative paths
+    from .call_openai import generate_response
+    from .twitter import TweetQueue, Tweet, Boolean
 
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# Setting Variables
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+APP_DIR = os.path.abspath(os.path.join(CUR_DIR, os.pardir))
+LOG_FILE = os.path.join(APP_DIR, 'twitter-bot.log')
+TEXT_FILE = os.path.join(APP_DIR, 'data/processed/quants_tweets.txt')
 
 # set up logging to file
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(name)-12s %(levelname)-8s %(message)s",
     datefmt="%y-%m-%d %H:%M",
-    filename="twitter-bot.log",
-    filemode="w",
+    filename=LOG_FILE,
+    filemode="a",
 )
 
 
@@ -60,7 +74,7 @@ def extract_tweet(openai_tweet: str, key_list: list) -> dict:
     return template
 
 
-def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue):
+def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue, text_file: str):
     for quant_tweet_idea in tweetQueue.tweets_not_generated:
         logging.info(5 * "*" + "Tweet to Gen" + 5 * "*")
         logging.info(quant_tweet_idea)
@@ -78,20 +92,26 @@ def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue):
             f"Content Length: {count_length(short_response)} Tweet Dict {short_response}"
         )
 
-        if count_length(first_draft) < 280:
-            quant_tweet_idea.tweet = Tweet.from_dict(first_draft)
-            quant_tweet_idea.gen_status = Boolean.TRUE
+        final_tweet = {}
+        for key, val in first_draft.items():
+            if len(val) < 280:
+                final_tweet[key] = val
 
-        elif count_length(short_response) < 280:
-            quant_tweet_idea.tweet = Tweet.from_dict(short_response)
-            quant_tweet_idea.gen_status = Boolean.TRUE
+            elif len(short_response[key]) < 280:
+                final_tweet[key] = short_response[key]
+                
+            else:
+                final_tweet[key] = short_response[key][:270]
+                logging.info("Value issue with Tweet {key}, too long")
 
-        else:
-            logging.info("Value issue with Tweet")
+        quant_tweet_idea.tweet = Tweet.from_dict(final_tweet)
+        quant_tweet_idea.gen_status = Boolean.TRUE
+
+        tweetQueue.to_text_file(text_file)
 
         logging.info(50 * "-")
-        time.sleep(30)
-        break
+        time.sleep(25)
+
 
 def search_next_tweet(tweetQueue: TweetQueue):
     if len(tweetQueue.tweets_not_generated) == 0 & len(tweetQueue.tweets_ready_for_sending) == 0:
@@ -106,7 +126,8 @@ def search_next_tweet(tweetQueue: TweetQueue):
 
 if __name__ == "__main__":
     # First step is to import file of topics and ides into TweetQueue
-    tweetQueue = TweetQueue.from_text_file("quants_tweets.txt")
+    text_file = TEXT_FILE
+    tweetQueue = TweetQueue.from_text_file(text_file)
 
     llm = ChatOpenAI(
         temperature=0.3,
@@ -114,6 +135,6 @@ if __name__ == "__main__":
         model_name="gpt-3.5-turbo-0613",
     )
 
-    generate_tweets(llm, tweetQueue)
+    generate_tweets(llm, tweetQueue, text_file)
 
-    tweetQueue.to_text_file("quants_tweets.txt")
+    tweetQueue.to_text_file(text_file)
