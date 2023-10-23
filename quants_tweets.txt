@@ -1,4 +1,4 @@
-1|Time Value of Money|Unveiling the Magic of Compounding: Time Value of Money|FALSE|FALSE|FALSE|
+1|Time Value of Money|Unveiling the Magic of Compounding: Time Value of Money|FALSE|TRUE|{"Hook": "Unveil the enchanting compounding magic.\n", "Intro": "Time Value of Money revealed.\n", "Explanation": "Money today > money tomorrow.\n", "Application": "Investment valuation, derivative pricing.\n", "Closing": "Embrace compounding's powerful growth!\n", "Action": "Start investing, watch wealth multiply.\n", "Engagement": "How do you maximize compounding?"}|
 2|Risk and Return|Playing the Odds: Understanding Risk and Return|FALSE|FALSE|FALSE|
 3|Modern Portfolio Theory|Crafting the Perfect Portfolio: An Intro to MPT|FALSE|FALSE|FALSE|
 4|Black-Scholes Model|The Black-Scholes Legacy: Revolutionizing Option Pricing|FALSE|FALSE|FALSE|

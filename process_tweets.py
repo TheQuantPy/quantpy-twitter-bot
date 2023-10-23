@@ -3,7 +3,7 @@ import re
 import time
 import logging
 from dotenv import load_dotenv
-from openai import generate_response
+from call_openai import generate_response
 from langchain.chat_models import ChatOpenAI
 from twitter import TweetQueue, Tweet, Boolean
 
@@ -13,12 +13,13 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # set up logging to file
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format="%(asctime)s %(name)-12s %(levelname)-8s %(message)s",
     datefmt="%y-%m-%d %H:%M",
     filename="twitter-bot.log",
     filemode="w",
 )
+
 
 count_length = lambda d: sum(len(d[val]) for val in d)
 count_words = lambda d: sum(len(re.findall(r"\w+", d[val])) for val in d)
@@ -60,7 +61,7 @@ def extract_tweet(openai_tweet: str, key_list: list) -> dict:
 
 
 def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue):
-    for quant_tweet_idea in tweetQueue.tweets_not_sent:
+    for quant_tweet_idea in tweetQueue.tweets_not_generated:
         logging.info(5 * "*" + "Tweet to Gen" + 5 * "*")
         logging.info(quant_tweet_idea)
         first_response, short_response = generate_response(
@@ -90,6 +91,17 @@ def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue):
 
         logging.info(50 * "-")
         time.sleep(30)
+        break
+
+def search_next_tweet(tweetQueue: TweetQueue):
+    if len(tweetQueue.tweets_not_generated) == 0 & len(tweetQueue.tweets_ready_for_sending) == 0:
+        logging.warning(ValueError('Need to create more tweet data'))
+        raise ValueError('Need to create more tweet data')
+    else:
+        tweetQueue.tweets.sort(reverse=False, key=lambda tweet: tweet.id)
+        quant_tweet = tweetQueue.tweets_not_sent[0]
+        return quant_tweet
+
 
 
 if __name__ == "__main__":

@@ -2,7 +2,6 @@ from enum import Flag
 from json import dumps, loads
 from dataclasses import dataclass, asdict, field
 
-
 class Boolean(Flag):
     TRUE = True
     FALSE = False
@@ -30,6 +29,13 @@ class Tweet:
             Action=tweet_d["Action"],
             Engagement=tweet_d["Engagement"],
         )
+    
+    def to_text(self):
+        _spaced_response = f"{self.Hook}\n{self.Intro}\n{self.Explanation}\n{self.Application}\n{self.Closing}\n{self.Action}\n{self.Engagement}"
+        if len(_spaced_response) > 280:
+            return f"{self.Hook}{self.Intro}{self.Explanation}{self.Application}{self.Closing}{self.Action}{self.Engagement}"
+        else:
+            return _spaced_response
 
 
 @dataclass
@@ -109,6 +115,10 @@ class TweetQueue:
     @property
     def tweets_not_generated(self):
         return [tweet for tweet in self.tweets if not tweet.gen_status]
+    
+    @property
+    def tweets_ready_for_sending(self):
+        return [tweet for tweet in self.tweets if tweet.gen_status and not tweet.sent_status]
 
     def enqueue(self, tweet):
         # print(f"{tweet.to_str()} will be added.")
