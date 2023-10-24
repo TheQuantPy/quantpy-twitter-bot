@@ -1,20 +1,44 @@
 # quantpy-twitter-bot
 
-This project utilises Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file.
+[QuantPy Twitter Feed](https://twitter.com/TheQuantPy)
+
+This project utilises OpenAI Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file.
 
 Tweets will be posted every 12 hours using apscheduler module in python, callable from the the linux operating system services.
 
 We can check the status, stop or start the service from the command line, and we also have access to the logs generated from the twitter bot.
 
-## To Run on Server/Raspberry Pi
+## :mountain: Task List
 
-### Step 1: download github repo to server or raspberry pi
+- [x] Project 1: QuantPy Main Twitter Feed Automation
+  - [x] Generate Quantitative Finance Twitter Content using OpenAI ChatGPT
+  - [x] Schedule & Send Tweets using Raspberry Pi Headless Server
+- [ ] Project 2: Automate scraping & publishing of top quality news on Quantitative Finance Topics
+- [ ] Project 3: Train & Publish specific Quantitative Finance ChatGPT Model
+- [ ] Project 4: Allow users to interact with trained model by tagging @TheQuantPy twitter handle on quant finance twitter posts :tada: :champagne:
+
+## :hammer_and_wrench: To Run on Remote Server / Raspberry Pi
+
+### Step 0 (Raspberry Pi): Setup Raspberry Pi
+
+[Setup Raspberry Pi in Headless mode](https://www.hackster.io/435738/how-to-setup-your-raspberry-pi-headless-8a905f), so you can access it like a remote server.
+
+### Step 1: Python3.11+ and Git
+
+Ensure python 3.11 is installed, and download git.
+
+```
+sudo apt update
+sudo apt install git
+```
+
+### Step 2: download github repo to remote server
 
 ```
 git clone https://github.com/TheQuantPy/quantpy-twitter-bot.git
 ```
 
-### Step 2: setup
+### Step 3: setup twitter bot service using `systemctl`
 
 > [!NOTE]
 > Important that twitter_bot.service file is [installed properly](https://gist.github.com/emxsys/a507f3cad928e66f6410e7ac28e2990f) on host server
