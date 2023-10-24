@@ -99,7 +99,7 @@ class TwitterBot:
         self.tweetQueue.to_text_file(self.text_file)
         logging.info("Latest version of tweets saved down.")
 
-if __name__ == "__main__":
+def run_quantpy_feed_bot():
     # First step is to import file of topics and ides into TweetQueue
     twitterBot = TwitterBot()
     # ensure there are tweets to send
@@ -112,9 +112,11 @@ if __name__ == "__main__":
             quant_track.sent_status = Boolean.TRUE
     # post tweet thread
     elif TWEET_TYPE == TweetType.THREAD:
-        # if twitterBot.post_thread(tweet = quant_track.tweet):
-        #     quant_track.sent_status = Boolean.TRUE
-        print(quant_track.tweet)
+        if twitterBot.post_thread(tweet = quant_track.tweet):
+            quant_track.sent_status = Boolean.TRUE
     # save down file
     twitterBot.save_file()
+
+if __name__ == "__main__":
+    run_quantpy_feed_bot()
 
