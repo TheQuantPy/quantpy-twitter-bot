@@ -1,7 +1,7 @@
 import time
 import logging
-from twitter_bot import run_quantpy_feed_bot
-from apscheduler.schedulers.background import BackgroundScheduler, BlockingScheduler
+from quantpy_feed.twitter_feed_bot import run_quantpy_feed_bot
+from apscheduler.schedulers.background import BackgroundScheduler
 
 # set up logging to file
 logging.basicConfig(
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     run_quantpy_feed_bot()
 
     # then add to scheduler
-    sched.add_job(run_quantpy_feed_bot,'interval', hours=12)
+    sched.add_job(run_quantpy_feed_bot, "interval", hours=12)
 
     # start scheduler
     sched.start()

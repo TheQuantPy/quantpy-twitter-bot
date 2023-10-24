@@ -22,8 +22,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Setting Variables
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 APP_DIR = os.path.abspath(os.path.join(CUR_DIR, os.pardir))
-LOG_FILE = os.path.join(APP_DIR, 'twitter-bot.log')
-TEXT_FILE = os.path.join(APP_DIR, 'data/processed/quants_tweets.txt')
+LOG_FILE = os.path.join(APP_DIR, "twitter-bot.log")
+TEXT_FILE = os.path.join(APP_DIR, "data/processed/quants_tweets.txt")
 
 # set up logging to file
 logging.basicConfig(
@@ -75,11 +75,13 @@ def extract_tweet(openai_tweet: str, key_list: list) -> dict:
 
 
 def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue, text_file: str):
-    for quant_tweet_idea in tweetQueue.tweets_not_generated:
+    for quant_tweet_track in tweetQueue.tweets_not_generated:
         logging.info(5 * "*" + "Tweet to Gen" + 5 * "*")
-        logging.info(quant_tweet_idea)
+        logging.info(quant_tweet_track)
         first_response, short_response = generate_response(
-            llm, quant_topic=quant_tweet_idea.topic, quant_title=quant_tweet_idea.title
+            llm,
+            quant_topic=quant_tweet_track.topic,
+            quant_title=quant_tweet_track.title,
         )
         logging.info(5 * "*" + "First Draft" + 5 * "*")
         first_draft = extract_tweet(first_response, key_list)
@@ -99,13 +101,13 @@ def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue, text_file: str):
 
             elif len(short_response[key]) < 280:
                 final_tweet[key] = short_response[key]
-                
+
             else:
                 final_tweet[key] = short_response[key][:270]
                 logging.info("Value issue with Tweet {key}, too long")
 
-        quant_tweet_idea.tweet = Tweet.from_dict(final_tweet)
-        quant_tweet_idea.gen_status = Boolean.TRUE
+        quant_tweet_track.tweet = Tweet.from_dict(final_tweet)
+        quant_tweet_track.update_gen_status(Boolean.TRUE)
 
         tweetQueue.to_text_file(text_file)
 
@@ -114,14 +116,17 @@ def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue, text_file: str):
 
 
 def search_next_tweet(tweetQueue: TweetQueue):
-    if len(tweetQueue.tweets_not_generated) == 0 & len(tweetQueue.tweets_ready_for_sending) == 0:
-        logging.warning(ValueError('Need to create more tweet data'))
-        raise ValueError('Need to create more tweet data')
+    if (
+        len(tweetQueue.tweets_not_generated)
+        == 0 & len(tweetQueue.tweets_ready_for_sending)
+        == 0
+    ):
+        logging.warning(ValueError("Need to create more tweet data"))
+        raise ValueError("Need to create more tweet data")
     else:
         tweetQueue.tweets.sort(reverse=False, key=lambda tweet: tweet.id)
         quant_tweet = tweetQueue.tweets_not_sent[0]
         return quant_tweet
-
 
 
 if __name__ == "__main__":

@@ -7,8 +7,10 @@ from langchain.prompts import (
 )
 
 
-def generate_response(llm: ChatOpenAI, quant_topic: str, quant_title: str) -> tuple[str,str]:
-    """Generate AI Twitter Content for QuantPy Media Channels
+def generate_response(
+    llm: ChatOpenAI, quant_topic: str, quant_title: str
+) -> tuple[str, str]:
+    """Generate AI Twitter Content for QuantPy Twitter Account
 
     Parameters:
         - llm:  pre-trained ChatOpenAi large language model
@@ -41,7 +43,7 @@ def generate_response(llm: ChatOpenAI, quant_topic: str, quant_title: str) -> tu
 
         % RESPONSE TEMPLATE:
 
-        - Here’s the response structure: 
+        - Here is the response structure: 
             Hook: Captivate with a one-liner.
             Intro: Briefly introduce the topic.
             Explanation: Simplify the core idea.
@@ -51,46 +53,46 @@ def generate_response(llm: ChatOpenAI, quant_topic: str, quant_title: str) -> tu
             Engagement: Quick question.
     
     """
+    # system prompt template to follow
     system_message_prompt = SystemMessagePromptTemplate.from_template(system_template)
+
     # human template for input
-    human_template="topic to write about is {topic}, and the title will be {title}. Keep the total response under 200 words total!"
+    human_template = "topic to write about is {topic}, and the title will be {title}. Keep the total response under 200 words total!"
     human_message_prompt = HumanMessagePromptTemplate.from_template(
-        human_template, 
-        input_variables=["topic", "title"]
-        )
+        human_template, input_variables=["topic", "title"]
+    )
 
+    # chat prompt template construction
     chat_prompt = ChatPromptTemplate.from_messages(
-        [system_message_prompt, 
-         human_message_prompt]
-         )
+        [system_message_prompt, human_message_prompt]
+    )
 
-    # get a chat completion from the formatted messages
+    # get a completed chat using formatted template with topic and title
     final_prompt = chat_prompt.format_prompt(
-        topic=quant_topic,
-        title=quant_title
-        ).to_messages()
-    
+        topic=quant_topic, title=quant_title
+    ).to_messages()
+
+    # pass template through llm and extract content attribute
     first_response = llm(final_prompt).content
 
+    # construct AI template, to pass back OpenAI response
     ai_message_prompt = AIMessagePromptTemplate.from_template(first_response)
 
-    # reminder of length
-    reminder_template="This was good, but way too long, please make your response much more concise and much shorter! Make phrases no longer than 15 words in total. Please maintain the existing template."
+    # additional prompt to remind ChatGPT of length requirement
+    reminder_template = "This was good, but way too long, please make your response much more concise and much shorter! Make phrases no longer than 15 words in total. Please maintain the existing template."
     reminder_prompt = HumanMessagePromptTemplate.from_template(reminder_template)
 
+    # chat prompt template construction with additional AI response and length reminder
     chat_prompt2 = ChatPromptTemplate.from_messages(
-        [system_message_prompt,
-         human_template, 
-         ai_message_prompt, 
-         reminder_prompt]
-         )
+        [system_message_prompt, human_template, ai_message_prompt, reminder_prompt]
+    )
 
-    # get a chat completion from the formatted messages
+    # get a completed chat using formatted template with topic and title
     final_prompt = chat_prompt2.format_prompt(
-        topic=quant_topic,
-        title=quant_title
-        ).to_messages()
-    
+        topic=quant_topic, title=quant_title
+    ).to_messages()
+
+    # pass template through llm and extract content attribute
     short_response = llm(final_prompt).content
 
     return first_response, short_response

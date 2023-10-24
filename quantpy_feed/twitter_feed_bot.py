@@ -3,17 +3,25 @@ import tweepy
 import logging
 from dataclasses import asdict
 from langchain.chat_models import ChatOpenAI
-from quantpy_feed.twitter import Boolean, Tweet, TweetType, TweetQueue
-from quantpy_feed.process_tweets import generate_tweets, search_next_tweet
+
+if __name__ == "__main__":
+    # module being called directly, use absolute path
+    from twitter import Boolean, Tweet, TweetType, TweetQueue
+    from process_tweets import generate_tweets, search_next_tweet
+else:
+    # module being called as package, use relative paths
+    from .twitter import Boolean, Tweet, TweetType, TweetQueue
+    from .process_tweets import generate_tweets, search_next_tweet
 
 # Helpful when testing locally
 from dotenv import load_dotenv
+
 load_dotenv()
 
 # Setting Variables
 TWEET_TYPE = TweetType.THREAD
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
-TEXT_FILE = os.path.join(CUR_DIR, 'data/processed/quants_tweets.txt')
+TEXT_FILE = os.path.join(CUR_DIR, "data/processed/quants_tweets.txt")
 
 # Load your Twitter and Airtable API keys (preferably from environment variables, config file, or within the railyway app)
 TWITTER_API_KEY = os.getenv("TWITTER_API_KEY")
@@ -34,15 +42,19 @@ logging.basicConfig(
     filemode="a",
 )
 
-# TwitterBot class to help us organize our code and manage shared state
+
 class TwitterBot:
+    """TwitterBot class to help us organize our code and manage shared state"""
+
     def __init__(self):
-        self.twitter_api = tweepy.Client(bearer_token=TWITTER_BEARER_TOKEN,
-                                         consumer_key=TWITTER_API_KEY,
-                                         consumer_secret=TWITTER_API_SECRET,
-                                         access_token=TWITTER_ACCESS_TOKEN,
-                                         access_token_secret=TWITTER_ACCESS_TOKEN_SECRET,
-                                         wait_on_rate_limit=True)
+        self.twitter_api = tweepy.Client(
+            bearer_token=TWITTER_BEARER_TOKEN,
+            consumer_key=TWITTER_API_KEY,
+            consumer_secret=TWITTER_API_SECRET,
+            access_token=TWITTER_ACCESS_TOKEN,
+            access_token_secret=TWITTER_ACCESS_TOKEN_SECRET,
+            wait_on_rate_limit=True,
+        )
 
         self.llm = ChatOpenAI(
             temperature=0.3,
@@ -61,25 +73,27 @@ class TwitterBot:
     def process_tweets(self):
         generate_tweets(self.llm, self.tweetQueue)
         self.tweetQueue.to_text_file(self.text_file)
-        
+
     def reply_tweet(self, original_tweet_id: int, tweet_reply: str) -> None:
-        self.twitter_api.update_status(status=tweet_reply, 
-                                    in_reply_to_status_id=original_tweet_id, 
-                                    auto_populate_reply_metadata=True)
-        
+        self.twitter_api.update_status(
+            status=tweet_reply,
+            in_reply_to_status_id=original_tweet_id,
+            auto_populate_reply_metadata=True,
+        )
+
     def post_thread(self, tweet: Tweet) -> None:
         tweet_d = asdict(tweet)
         try:
             for key, tweet_thread in tweet_d.items():
-                if key == 'Hook':
+                if key == "Hook":
                     _tweet_thread = self.twitter_api.create_tweet(text=tweet_thread)
                 else:
                     self.twitter_api.create_tweet(
-                                    text=tweet_thread,
-                                    in_reply_to_tweet_id=_last_tweet_id.data['id']
-                                    )
+                        text=tweet_thread,
+                        in_reply_to_tweet_id=_last_tweet_id.data["id"],
+                    )
                 _last_tweet_id = _tweet_thread
-                logging.info('Sent Status: TRUE. Tweet: {tweet_thread}')
+                logging.info("Sent Status: TRUE. Tweet: {tweet_thread}")
             return True
         except Exception as e:
             logging.warning(e)
@@ -89,34 +103,36 @@ class TwitterBot:
         quant_tweet = tweet.to_text()
         try:
             self.twitter_api.create_tweet(text=quant_tweet)
-            logging.info('Sent Status: TRUE. Tweet: {quant_tweet}')
+            logging.info(f"Sent Status: TRUE. Tweet: {quant_tweet}")
             return True
         except Exception as e:
             logging.warning(e)
             return False
-        
+
     def save_file(self):
         self.tweetQueue.to_text_file(self.text_file)
         logging.info("Latest version of tweets saved down.")
 
+
 def run_quantpy_feed_bot():
+    """Run twitter bot, search for next tweet and send in thread"""
     # First step is to import file of topics and ides into TweetQueue
     twitterBot = TwitterBot()
     # ensure there are tweets to send
     twitterBot.verify_tweet_to_send()
     # Identify Tweet Track to Send
-    quant_track = search_next_tweet(twitterBot.tweetQueue)
+    quant_tweet_track = search_next_tweet(twitterBot.tweetQueue)
     # post single tweet
     if TWEET_TYPE == TweetType.SINGLE:
-        if twitterBot.post_tweet(tweet = quant_track.tweet):
-            quant_track.sent_status = Boolean.TRUE
+        if twitterBot.post_tweet(tweet=quant_tweet_track.tweet):
+            quant_tweet_track.update_sent_status(Boolean.TRUE)
     # post tweet thread
     elif TWEET_TYPE == TweetType.THREAD:
-        if twitterBot.post_thread(tweet = quant_track.tweet):
-            quant_track.sent_status = Boolean.TRUE
+        if twitterBot.post_thread(tweet=quant_tweet_track.tweet):
+            quant_tweet_track.update_sent_status(Boolean.TRUE)
     # save down file
     twitterBot.save_file()
 
+
 if __name__ == "__main__":
     run_quantpy_feed_bot()
-

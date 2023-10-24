@@ -2,16 +2,21 @@ from enum import Flag, auto
 from json import dumps, loads
 from dataclasses import dataclass, asdict, field
 
+
 class Boolean(Flag):
     TRUE = True
     FALSE = False
+
 
 class TweetType(Flag):
     SINGLE = auto()
     THREAD = auto()
 
+
 @dataclass
 class Tweet:
+    """Class for Tweets in desired OpenAI Prompt Template"""
+
     Hook: str
     Intro: str
     Explanation: str
@@ -22,7 +27,7 @@ class Tweet:
 
     @classmethod
     def from_dict(cls, tweet_d: dict):
-        # return class
+        # return class from dictionary
         return cls(
             Hook=tweet_d["Hook"],
             Intro=tweet_d["Intro"],
@@ -32,8 +37,9 @@ class Tweet:
             Action=tweet_d["Action"],
             Engagement=tweet_d["Engagement"],
         )
-    
+
     def to_text(self):
+        # return text to send directly to twitter
         _spaced_response = f"{self.Hook}\n{self.Intro}\n{self.Explanation}\n{self.Application}\n{self.Closing}\n{self.Action}\n{self.Engagement}"
         if len(_spaced_response) > 280:
             return f"{self.Hook}{self.Intro}{self.Explanation}{self.Application}{self.Closing}{self.Action}{self.Engagement}"
@@ -43,7 +49,7 @@ class Tweet:
 
 @dataclass
 class TrackTweet:
-    """Class for keeping track of Tweets"""
+    """Class for Tracking Tweets Status in Process Pipeline"""
 
     id: int
     topic: str
@@ -57,6 +63,7 @@ class TrackTweet:
 
     @classmethod
     def from_str(cls, tweet_line: str):
+        """Generate TrackTweet from String"""
         # underscores used to indicate unpacked variables, only used internally
         (
             _id,
@@ -91,18 +98,26 @@ class TrackTweet:
         return _trackTweet
 
     def to_str(self):
+        """return string that will be saved down as line within text file"""
         _part_1 = f"{self.id}|{self.topic}|{self.title}|{self.sent_status.name}|{self.gen_status.name}|"
         _part_2 = (
             f"{dumps(asdict(self.tweet)) if hasattr(self, 'tweet') else 'FALSE'}|\n"
         )
         return _part_1 + _part_2
 
-    def update_status(self, new_status: Boolean):
+    def update_sent_status(self, new_status: Boolean):
+        """update sent status"""
         self.sent_status = new_status
+
+    def update_gen_status(self, new_status: Boolean):
+        """update sent status"""
+        self.gen_status = new_status
 
 
 @dataclass
 class TweetQueue:
+    """Class for managing Tweet Pipeline - Processing, Generating, Posting"""
+
     tweets: list[TrackTweet] = field(default_factory=list)
 
     def __len__(self):
@@ -118,10 +133,12 @@ class TweetQueue:
     @property
     def tweets_not_generated(self):
         return [tweet for tweet in self.tweets if not tweet.gen_status]
-    
+
     @property
     def tweets_ready_for_sending(self):
-        return [tweet for tweet in self.tweets if tweet.gen_status and not tweet.sent_status]
+        return [
+            tweet for tweet in self.tweets if tweet.gen_status and not tweet.sent_status
+        ]
 
     def enqueue(self, tweet):
         # print(f"{tweet.to_str()} will be added.")
