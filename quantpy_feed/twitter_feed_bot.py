@@ -18,10 +18,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Setting Variables
+# Tweet Settings & Variables
 TWEET_TYPE = TweetType.THREAD
+
+# Directories
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
-TEXT_FILE = os.path.join(CUR_DIR, "data/processed/quants_tweets.txt")
+APP_DIR = os.path.abspath(os.path.join(CUR_DIR, os.pardir))
+LOG_FILE = os.path.join(APP_DIR, "twitter-bot.log")
+TEXT_FILE = os.path.join(APP_DIR, "data/processed/quants_tweets.txt")
 
 # Load your Twitter and Airtable API keys (preferably from environment variables, config file, or within the railyway app)
 TWITTER_API_KEY = os.getenv("TWITTER_API_KEY")
