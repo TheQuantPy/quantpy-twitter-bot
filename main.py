@@ -15,8 +15,14 @@ logging.basicConfig(
 if __name__ == "__main__":
     # Creates a default Background Scheduler
     sched = BackgroundScheduler(daemon=True)
-    
+
+    # run once to publish
+    run_quantpy_feed_bot()
+
+    # then add to scheduler
     sched.add_job(run_quantpy_feed_bot,'interval', hours=12)
+
+    # start scheduler
     sched.start()
 
     while True:

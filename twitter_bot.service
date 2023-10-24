@@ -1,0 +1,11 @@
+[Unit]
+Description=QuantPy Twitter Bot Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/quantpy/quantpy-twitter-bot/env/bin/python /home/quantpy/quantpy-twitter-bot/main.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
