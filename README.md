@@ -4,12 +4,12 @@ This project automates the Twitter Feed of [QuantPy](https://twitter.com/TheQuan
 
 ## :pushpin: Current Features
 
-<img src="quantpy-twitter-bot/data/images/quantpy_twitter_bot.jpeg" width="18%">
+<img src="https://github.com/TheQuantPy/quantpy-twitter-bot/blob/3f7a351d7f7da2b70c96b94cdd76aaf1bf1b1c05/data/images/quantpy_twitter_bot.jpeg" width="18%">
 </img> 
-<img src="quantpy-twitter-bot/data/images/quantpy_twitter_console.png" width="18%"></img> 
-<img src="quantpy-twitter-bot/data/images/twitter_bot_logs.png" width="18%"></img> 
-<img src="quantpy-twitter-bot/data/images/twitter_jupyter_notebook.png" width="18%"></img> 
-<img src="quantpy-twitter-bot/data/images/twitter_prompt_engineering.png" width="18%"></img>
+<img src="https://github.com/TheQuantPy/quantpy-twitter-bot/blob/3f7a351d7f7da2b70c96b94cdd76aaf1bf1b1c05/data/images/quantpy_twitter_console.png" width="18%"></img> 
+<img src="https://github.com/TheQuantPy/quantpy-twitter-bot/blob/3f7a351d7f7da2b70c96b94cdd76aaf1bf1b1c05/data/images/twitter_bot_logs.png" width="18%"></img> 
+<img src="https://github.com/TheQuantPy/quantpy-twitter-bot/blob/3f7a351d7f7da2b70c96b94cdd76aaf1bf1b1c05/data/images/twitter_jupyter_notebook.png" width="18%"></img> 
+<img src="https://github.com/TheQuantPy/quantpy-twitter-bot/blob/3f7a351d7f7da2b70c96b94cdd76aaf1bf1b1c05/data/images/twitter_prompt_engineering.png" width="18%"></img>
 
 - utilises OpenAI Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file
 - tweets are posted to twitter (using <i>tweepy</i>) every 12 hours with the <i>apscheduler</i> module in python
