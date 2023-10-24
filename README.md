@@ -1,23 +1,40 @@
 # quantpy-twitter-bot
 
-[QuantPy Twitter Feed](https://twitter.com/TheQuantPy)
+This project automates the Twitter Feed of [QuantPy](https://twitter.com/TheQuantPy) using the OpenAI and Twitter API's.
 
-This project utilises OpenAI Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file.
+## :toolbox: Current Functionality:
 
-Tweets will be posted every 12 hours using apscheduler module in python, callable from the the linux operating system services.
-
-We can check the status, stop or start the service from the command line, and we also have access to the logs generated from the twitter bot.
+- utilises OpenAI Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file
+- tweets are posted to twitter (using <i>tweepy</i>) every 12 hours with the <i>apscheduler<i> module in python
+- scripts are run using the operating system service and therefore from the command line of our remote server we can: check the status, stop or start the twitter bot service
+- we also have access to the logs generated from the twitter bot
 
 ## :mountain: Task List
 
-- [x] Project 1: QuantPy Main Twitter Feed Automation
+- [x] <b>Project 1:</b> QuantPy Main Twitter Feed Automation
   - [x] Generate Quantitative Finance Twitter Content using OpenAI ChatGPT
   - [x] Schedule & Send Tweets using Raspberry Pi Headless Server
-- [ ] Project 2: Automate scraping & publishing of top quality news on Quantitative Finance Topics
-- [ ] Project 3: Train & Publish specific Quantitative Finance ChatGPT Model
-- [ ] Project 4: Allow users to interact with trained model by tagging @TheQuantPy twitter handle on quant finance twitter posts :tada: :champagne:
+- [ ] <b>Project 2:</b> Automate scraping & publishing of top quality news on Quantitative Finance Topics
+- [ ] <b>Project 3:</b> Train & Publish specific Quantitative Finance ChatGPT Model
+- [ ] <b>Project 4:</b> Allow users to interact with trained model by tagging @TheQuantPy twitter handle on quant finance twitter posts :tada: :champagne:
 
-## :hammer_and_wrench: To Run on Remote Server / Raspberry Pi
+## :hammer_and_wrench: Deployment Steps
+
+These steps are to be followed to create a clone of the twitter bot and run it on a remote server or rapsberry pi (as I have done here).
+
+### :gear: Pre-Steps:
+
+1. Create [OpenAI Account for API](https://platform.openai.com/apps)
+2. Create API key for [ChatGPT API](https://platform.openai.com/account/api-keys)
+3. Create Twitter Account for your bot
+4. Create [Developer Account](https://developer.twitter.com/en/portal/dashboard), this can be done for free, however there is a 250 word explanation of use case required.
+5. Add environment variables to a .env file, and have this where you host your app. List of environment variables required and naming convention below:
+   - OPENAI_API_KEY
+   - TWITTER_API_KEY
+   - TWITTER_API_SECRET
+   - TWITTER_ACCESS_TOKEN
+   - TWITTER_ACCESS_TOKEN_SECRET
+   - TWITTER_BEARER_TOKEN
 
 ### Step 0 (Raspberry Pi): Setup Raspberry Pi
 
@@ -38,7 +55,28 @@ sudo apt install git
 git clone https://github.com/TheQuantPy/quantpy-twitter-bot.git
 ```
 
-### Step 3: setup twitter bot service using `systemctl`
+### Step 3: create & activate virtual env
+
+### 3a. Enter the github project main folder
+
+```
+cd quantpy-twitter-bot
+```
+
+### 3b. create and activate virtual env
+
+```
+python -m venv env
+source env/bin/activate
+```
+
+### 3c. download requirements
+
+```
+pip install -r requirements.txt
+```
+
+### Step 4: setup twitter bot service using `systemctl`
 
 > [!NOTE]
 > Important that twitter_bot.service file is [installed properly](https://gist.github.com/emxsys/a507f3cad928e66f6410e7ac28e2990f) on host server
@@ -52,14 +90,14 @@ We will run out twitter bot script as a service in the operating system so it ca
 
 We will setup our bot script as a service using [linux operating system sysemd](https://wiki.archlinux.org/title/systemd), which can be commanded using <i>systemctl</i>.
 
-#### 2a. Setting up the service to run our script in daemon mode on the server:
+#### 4a. Setting up the service to run our script in daemon mode on the server:
 
 ```
 cd /lib/systemd/system/
 sudo nano twitter_bot.service
 ```
 
-#### 2b. Add the Following Text and save the service file:
+#### 4b. Add the Following Text and save the service file:
 
 ```
 [Unit]
@@ -75,7 +113,7 @@ Restart=on-abort
 WantedBy=multi-user.target
 ```
 
-#### 2c. Now that we have our service we need to activate it:
+#### 4c. Now that we have our service we need to activate it:
 
 ```
 sudo chmod 644 /lib/systemd/system/twitter_bot.service
@@ -85,7 +123,7 @@ sudo systemctl enable twitter_bot.service
 
 ```
 
-#### 2d. Now we can access the following commands
+#### 4d. Now we can access the following commands
 
 To start service:
 
@@ -110,3 +148,11 @@ To check service logs:
 ```
 sudo journalctl -f -u twitter_bot.service
 ```
+
+## The MIT License (MIT)
+
+Copyright © 2023 QuantPy Pty Ltd
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
