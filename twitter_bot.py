@@ -3,7 +3,6 @@ import tweepy
 import logging
 from dataclasses import asdict
 from langchain.chat_models import ChatOpenAI
-import quantpy_feed.call_openai
 from quantpy_feed.twitter import Boolean, Tweet, TweetType, TweetQueue
 from quantpy_feed.process_tweets import generate_tweets, search_next_tweet
 
