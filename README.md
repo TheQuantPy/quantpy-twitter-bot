@@ -1,6 +1,6 @@
 # quantpy-twitter-bot
 
-This project utilises Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file. Tweets will be posted daily.
+This project utilises Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file. Tweets will be posted every 12 hours using apscheduler module in python, callable from the server daemon services.
 
 ## To Run on Server
 
