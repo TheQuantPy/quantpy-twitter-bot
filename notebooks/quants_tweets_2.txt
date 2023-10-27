@@ -1,0 +1,100 @@
+101|Time Value of Money|Understanding the Time Value of Money in Quant Finance|FALSE|FALSE|FALSE|
+102|Risk and Return|Quantifying Risk and Return|FALSE|FALSE|FALSE|
+103|Modern Portfolio Theory|Mastering Modern Portfolio Theory|FALSE|FALSE|FALSE|
+104|Black-Scholes Model|Black-Scholes Model: The ABCs of Option Pricing|FALSE|FALSE|FALSE|
+105|Multifactor Models|Exploring Multifactor Models in Finance|FALSE|FALSE|FALSE|
+106|Copula Models|Copula Models: The Backbone of Financial Engineering|FALSE|FALSE|FALSE|
+107|Stochastic Calculus|Stochastic Calculus for Finance: A Primer|FALSE|FALSE|FALSE|
+108|Ito’s Lemma|Ito's Lemma Explained|FALSE|FALSE|FALSE|
+109|Quantitative Risk Management|Techniques in Quantitative Risk Management|FALSE|FALSE|FALSE|
+110|Simple Moving Average|Building a Simple Moving Average Trading Strategy|FALSE|FALSE|FALSE|
+111|Backtesting|Introduction to Backtesting and its Pitfalls|FALSE|FALSE|FALSE|
+112|Transaction Costs|Incorporating Transaction Costs in Trading Models|FALSE|FALSE|FALSE|
+113|Slippage|Understanding and Accounting for Slippage|FALSE|FALSE|FALSE|
+114|Portfolio Optimization|Portfolio Optimization Techniques|FALSE|FALSE|FALSE|
+115|QuantLib|Introduction to QuantLib|FALSE|FALSE|FALSE|
+116|Zipline|Getting Started with Zipline|FALSE|FALSE|FALSE|
+117|Backtrader|Algorithmic Trading with Backtrader|FALSE|FALSE|FALSE|
+118|Monte Carlo Simulations|Implementing Monte Carlo Simulations using Python|FALSE|FALSE|FALSE|
+119|Time Series Analysis|Time Series Analysis with Statsmodels|FALSE|FALSE|FALSE|
+120|Machine Learning|Machine Learning in Quantitative Finance|FALSE|FALSE|FALSE|
+121|Cryptocurrency|Cryptocurrency Trading Strategies for Quants|FALSE|FALSE|FALSE|
+122|High-Frequency Trading|High-Frequency Trading Strategies|FALSE|FALSE|FALSE|
+123|Market Anomalies|Analyzing Famous Market Anomalies|FALSE|FALSE|FALSE|
+124|Financial Crises|Breaking Down Financial Crises: A Quant Perspective|FALSE|FALSE|FALSE|
+125|Hedge Funds|Exploring Hedge Fund Strategies: Renaissance Technologies|FALSE|FALSE|FALSE|
+126|Algorithmic Trading Basics|Algorithmic Trading: A Comprehensive Guide|FALSE|FALSE|FALSE|
+127|Behavioral Finance|Behavioral Finance and Quant Strategies|FALSE|FALSE|FALSE|
+128|Volatility Modeling|Understanding Volatility: Models and Implications|FALSE|FALSE|FALSE|
+129|Bayesian Methods|Bayesian Methods in Finance|FALSE|FALSE|FALSE|
+130|Neural Networks|Neural Networks in Finance: A Quick Start Guide|FALSE|FALSE|FALSE|
+131|Option Greeks|Understanding Option Greeks: Delta, Gamma, Vega|FALSE|FALSE|FALSE|
+132|Value at Risk|Calculating Value at Risk: Methods and Models|FALSE|FALSE|FALSE|
+133|Real Options|Real Options in Corporate Finance|FALSE|FALSE|FALSE|
+134|Natural Language Processing|NLP in Quant Finance: Sentiment Analysis|FALSE|FALSE|FALSE|
+135|Event-Driven Strategies|Event-Driven Trading Strategies|FALSE|FALSE|FALSE|
+136|Utility Theory|Utility Theory in Portfolio Management|FALSE|FALSE|FALSE|
+137|Mean Reversion|Mean Reversion Strategies: Theory and Practice|FALSE|FALSE|FALSE|
+138|GARCH Models|Introduction to GARCH Models|FALSE|FALSE|FALSE|
+139|CAPM|Capital Asset Pricing Model: A Quant's View|FALSE|FALSE|FALSE|
+140|Cointegration|Understanding Cointegration: A Quant Approach|FALSE|FALSE|FALSE|
+141|ARIMA Models|ARIMA Models in Time Series Forecasting|FALSE|FALSE|FALSE|
+142|Pairs Trading|Mastering Pairs Trading: Strategies and Techniques|FALSE|FALSE|FALSE|
+143|Simulation Methods|Simulation Methods in Quant Finance|FALSE|FALSE|FALSE|
+144|CVA and Counterparty Risk|CVA and Counterparty Risk: A Quantitative Analysis|FALSE|FALSE|FALSE|
+145|Dynamic Hedging|Dynamic Hedging: Techniques and Strategies|FALSE|FALSE|FALSE|
+146|Quantitative Value|Quantitative Value: A Practitioner’s Guide|FALSE|FALSE|FALSE|
+147|Option Strategies|Popular Option Strategies: A Quantitative Review|FALSE|FALSE|FALSE|
+148|Term Structure of Interest Rates|Understanding the Term Structure of Interest Rates|FALSE|FALSE|FALSE|
+149|Markov Chains|Markov Chains in Quantitative Finance|FALSE|FALSE|FALSE|
+150|Fixed Income Securities|Quantitative Approaches to Fixed Income Securities|FALSE|FALSE|FALSE|
+151|Credit Risk|Quantitative Methods for Credit Risk Analysis|FALSE|FALSE|FALSE|
+152|Value Investing|A Quantitative Approach to Value Investing|FALSE|FALSE|FALSE|
+153|Reinforcement Learning|Using Reinforcement Learning in Trading Strategies|FALSE|FALSE|FALSE|
+154|Econometrics|Introduction to Econometric Models for Quants|FALSE|FALSE|FALSE|
+155|Sentiment Analysis|Quantifying Market Sentiment: A Guide|FALSE|FALSE|FALSE|
+156|Technical Indicators|How to Use RSI and MACD in Algorithmic Trading|FALSE|FALSE|FALSE|
+157|Market Microstructure|Understanding Market Microstructure|FALSE|FALSE|FALSE|
+158|Bid-Ask Spread|The Quantitative Analysis of Bid-Ask Spreads|FALSE|FALSE|FALSE|
+159|Liquidity|Quantifying Liquidity: Methods and Measures|FALSE|FALSE|FALSE|
+160|Fuzzy Logic|Using Fuzzy Logic in Quantitative Finance|FALSE|FALSE|FALSE|
+161|Fractional Brownian Motion|Fractional Brownian Motion in Finance: An Introduction|FALSE|FALSE|FALSE|
+162|Long-Short Strategies|Long-Short Strategies: A Quant Approach|FALSE|FALSE|FALSE|
+163|Convex Optimization|Convex Optimization in Quant Finance|FALSE|FALSE|FALSE|
+164|ARDL Models|AutoRegressive Distributed Lag (ARDL) Models in Finance|FALSE|FALSE|FALSE|
+165|ETF Arbitrage|Understanding ETF Arbitrage: A Quantitative Guide|FALSE|FALSE|FALSE|
+166|Bootstrap Methods|Bootstrap Methods in Finance|FALSE|FALSE|FALSE|
+167|Quantitative Strategy Evaluation|Evaluating Quant Strategies: Key Metrics|FALSE|FALSE|FALSE|
+168|Kelly Criterion|Using the Kelly Criterion in Trading|FALSE|FALSE|FALSE|
+169|Dark Pools|Dark Pools: A Quantitative Perspective|FALSE|FALSE|FALSE|
+170|Hedge Fund Replication|Hedge Fund Replication: Quantitative Methods|FALSE|FALSE|FALSE|
+171|Data Snooping|Data Snooping: A Quant’s Guide to Avoiding Bias|FALSE|FALSE|FALSE|
+172|Non-linear Models|Non-linear Models in Quantitative Finance|FALSE|FALSE|FALSE|
+173|Heteroskedasticity|Dealing with Heteroskedasticity in Financial Data|FALSE|FALSE|FALSE|
+174|Statistical Arbitrage|Understanding Statistical Arbitrage|FALSE|FALSE|FALSE|
+175|Decision Trees|Applying Decision Trees in Finance|FALSE|FALSE|FALSE|
+176|Futures and Forwards|Quantitative Analysis of Futures and Forwards|FALSE|FALSE|FALSE|
+177|Leverage|Understanding Leverage: A Quantitative Analysis|FALSE|FALSE|FALSE|
+178|Fundamentals of ETFs|The Fundamentals of ETFs: A Quant’s Perspective|FALSE|FALSE|FALSE|
+179|Trading Psychology|Trading Psychology and Quant Strategies|FALSE|FALSE|FALSE|
+180|Copula-based Dependency|Understanding Copula-based Dependency in Finance|FALSE|FALSE|FALSE|
+181|Jump-diffusion Models|Jump-diffusion Models in Option Pricing|FALSE|FALSE|FALSE|
+182|K-means Clustering|K-means Clustering in Portfolio Management|FALSE|FALSE|FALSE|
+183|Spline Methods|Spline Methods for Curve Fitting in Finance|FALSE|FALSE|FALSE|
+184|Quants in Investment Banking|Roles of Quants in Investment Banking|FALSE|FALSE|FALSE|
+185|Interest Rate Swaps|Quantitative Analysis of Interest Rate Swaps|FALSE|FALSE|FALSE|
+186|Energy Derivatives|Quantitative Models for Energy Derivatives|FALSE|FALSE|FALSE|
+187|Exotic Options|Pricing Exotic Options: A Quantitative Guide|FALSE|FALSE|FALSE|
+188|Student-t Distribution|Student-t Distribution in Quant Finance|FALSE|FALSE|FALSE|
+189|Forecasting Volatility|Forecasting Volatility: Models and Methods|FALSE|FALSE|FALSE|
+190|Career Paths|Career Paths in Quantitative Finance|FALSE|FALSE|FALSE|
+191|PCA in Finance|Principal Component Analysis in Finance|FALSE|FALSE|FALSE|
+192|ETF Mechanics|ETF Mechanics: Creation and Redemption|FALSE|FALSE|FALSE|
+193|Trend Following|Trend Following Strategies: A Quantitative Approach|FALSE|FALSE|FALSE|
+194|Quantitative Momentum|Quantitative Momentum: Strategies and Metrics|FALSE|FALSE|FALSE|
+195|Socially Responsible Investing|Quantitative Methods in Socially Responsible Investing|FALSE|FALSE|FALSE|
+196|Risk Parity|Understanding Risk Parity in Portfolio Management|FALSE|FALSE|FALSE|
+197|Commodity Trading|Quantitative Models for Commodity Trading|FALSE|FALSE|FALSE|
+198|Autocorrelation|Detecting Autocorrelation in Financial Time Series|FALSE|FALSE|FALSE|
+199|Machine Learning Series|Machine Learning in Finance: A Multi-part Series|FALSE|FALSE|FALSE|
+200|Python for Quant Finance Series|Python for Quant Finance: A Comprehensive Guide|FALSE|FALSE|FALSE|

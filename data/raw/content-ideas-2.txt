@@ -1,0 +1,102 @@
+| Number | Topic                                  | Title                                                   |
+|--------|----------------------------------------|---------------------------------------------------------|
+| 1      | Time Value of Money                    | Understanding the Time Value of Money in Quant Finance  |
+| 2      | Risk and Return                        | Quantifying Risk and Return                             |
+| 3      | Modern Portfolio Theory                | Mastering Modern Portfolio Theory                       |
+| 4      | Black-Scholes Model                    | Black-Scholes Model: The ABCs of Option Pricing         |
+| 5      | Multifactor Models                     | Exploring Multifactor Models in Finance                 |
+| 6      | Copula Models                          | Copula Models: The Backbone of Financial Engineering    |
+| 7      | Stochastic Calculus                    | Stochastic Calculus for Finance: A Primer               |
+| 8      | Ito’s Lemma                            | Ito's Lemma Explained                                   |
+| 9      | Quantitative Risk Management           | Techniques in Quantitative Risk Management              |
+| 10     | Simple Moving Average                  | Building a Simple Moving Average Trading Strategy       |
+| 11     | Backtesting                            | Introduction to Backtesting and its Pitfalls            |
+| 12     | Transaction Costs                      | Incorporating Transaction Costs in Trading Models       |
+| 13     | Slippage                               | Understanding and Accounting for Slippage               |
+| 14     | Portfolio Optimization                 | Portfolio Optimization Techniques                        |
+| 15     | QuantLib                               | Introduction to QuantLib                                |
+| 16     | Zipline                                | Getting Started with Zipline                            |
+| 17     | Backtrader                             | Algorithmic Trading with Backtrader                     |
+| 18     | Monte Carlo Simulations                | Implementing Monte Carlo Simulations using Python       |
+| 19     | Time Series Analysis                   | Time Series Analysis with Statsmodels                   |
+| 20     | Machine Learning                       | Machine Learning in Quantitative Finance                |
+| 21     | Cryptocurrency                         | Cryptocurrency Trading Strategies for Quants            |
+| 22     | High-Frequency Trading                 | High-Frequency Trading Strategies                       |
+| 23     | Market Anomalies                       | Analyzing Famous Market Anomalies                       |
+| 24     | Financial Crises                       | Breaking Down Financial Crises: A Quant Perspective     |
+| 25     | Hedge Funds                            | Exploring Hedge Fund Strategies: Renaissance Technologies|
+| 26     | Algorithmic Trading Basics             | Algorithmic Trading: A Comprehensive Guide              |
+| 27     | Behavioral Finance                     | Behavioral Finance and Quant Strategies                 |
+| 28     | Volatility Modeling                    | Understanding Volatility: Models and Implications       |
+| 29     | Bayesian Methods                       | Bayesian Methods in Finance                             |
+| 30     | Neural Networks                        | Neural Networks in Finance: A Quick Start Guide         |
+| 31     | Option Greeks                          | Understanding Option Greeks: Delta, Gamma, Vega          |
+| 32     | Value at Risk                          | Calculating Value at Risk: Methods and Models           |
+| 33     | Real Options                           | Real Options in Corporate Finance                        |
+| 34     | Natural Language Processing            | NLP in Quant Finance: Sentiment Analysis                 |
+| 35     | Event-Driven Strategies                | Event-Driven Trading Strategies                         |
+| 36     | Utility Theory                         | Utility Theory in Portfolio Management                  |
+| 37     | Mean Reversion                         | Mean Reversion Strategies: Theory and Practice           |
+| 38     | GARCH Models                           | Introduction to GARCH Models                            |
+| 39     | CAPM                                   | Capital Asset Pricing Model: A Quant's View              |
+| 40     | Cointegration                          | Understanding Cointegration: A Quant Approach            |
+| 41     | ARIMA Models                           | ARIMA Models in Time Series Forecasting                  |
+| 42     | Pairs Trading                          | Mastering Pairs Trading: Strategies and Techniques      |
+| 43     | Simulation Methods                     | Simulation Methods in Quant Finance                     |
+| 44     | CVA and Counterparty Risk              | CVA and Counterparty Risk: A Quantitative Analysis      |
+| 45     | Dynamic Hedging                        | Dynamic Hedging: Techniques and Strategies              |
+| 46     | Quantitative Value                     | Quantitative Value: A Practitioner’s Guide              |
+| 47     | Option Strategies                      | Popular Option Strategies: A Quantitative Review        |
+| 48     | Term Structure of Interest Rates       | Understanding the Term Structure of Interest Rates       |
+| 49     | Markov Chains                          | Markov Chains in Quantitative Finance                    |
+| 50     | Fixed Income Securities                | Quantitative Approaches to Fixed Income Securities      |
+| 51     | Credit Risk                            | Quantitative Methods for Credit Risk Analysis           |
+| 52     | Value Investing                        | A Quantitative Approach to Value Investing              |
+| 53     | Reinforcement Learning                 | Using Reinforcement Learning in Trading Strategies      |
+| 54     | Econometrics                           | Introduction to Econometric Models for Quants            |
+| 55     | Sentiment Analysis                     | Quantifying Market Sentiment: A Guide                   |
+| 56     | Technical Indicators                   | How to Use RSI and MACD in Algorithmic Trading          |
+| 57     | Market Microstructure                  | Understanding Market Microstructure                      |
+| 58     | Bid-Ask Spread                         | The Quantitative Analysis of Bid-Ask Spreads            |
+| 59     | Liquidity                              | Quantifying Liquidity: Methods and Measures             |
+| 60     | Fuzzy Logic                            | Using Fuzzy Logic in Quantitative Finance               |
+| 61     | Fractional Brownian Motion             | Fractional Brownian Motion in Finance: An Introduction  |
+| 62     | Long-Short Strategies                  | Long-Short Strategies: A Quant Approach                 |
+| 63     | Convex Optimization                    | Convex Optimization in Quant Finance                    |
+| 64     | ARDL Models                            | AutoRegressive Distributed Lag (ARDL) Models in Finance |
+| 65     | ETF Arbitrage                          | Understanding ETF Arbitrage: A Quantitative Guide       |
+| 66     | Bootstrap Methods                      | Bootstrap Methods in Finance                            |
+| 67     | Quantitative Strategy Evaluation       | Evaluating Quant Strategies: Key Metrics                |
+| 68     | Kelly Criterion                        | Using the Kelly Criterion in Trading                    |
+| 69     | Dark Pools                             | Dark Pools: A Quantitative Perspective                  |
+| 70     | Hedge Fund Replication                 | Hedge Fund Replication: Quantitative Methods            |
+| 71     | Data Snooping                          | Data Snooping: A Quant’s Guide to Avoiding Bias         |
+| 72     | Non-linear Models                      | Non-linear Models in Quantitative Finance               |
+| 73     | Heteroskedasticity                     | Dealing with Heteroskedasticity in Financial Data       |
+| 74     | Statistical Arbitrage                  | Understanding Statistical Arbitrage                     |
+| 75     | Decision Trees                         | Applying Decision Trees in Finance                      |
+| 76     | Futures and Forwards                   | Quantitative Analysis of Futures and Forwards           |
+| 77     | Leverage                               | Understanding Leverage: A Quantitative Analysis         |
+| 78     | Fundamentals of ETFs                   | The Fundamentals of ETFs: A Quant’s Perspective         |
+| 79     | Trading Psychology                     | Trading Psychology and Quant Strategies                 |
+| 80     | Copula-based Dependency                | Understanding Copula-based Dependency in Finance        |
+| 81     | Jump-diffusion Models                  | Jump-diffusion Models in Option Pricing                 |
+| 82     | K-means Clustering                     | K-means Clustering in Portfolio Management              |
+| 83     | Spline Methods                         | Spline Methods for Curve Fitting in Finance             |
+| 84     | Quants in Investment Banking           | Roles of Quants in Investment Banking                   |
+| 85     | Interest Rate Swaps                    | Quantitative Analysis of Interest Rate Swaps            |
+| 86     | Energy Derivatives                     | Quantitative Models for Energy Derivatives              |
+| 87     | Exotic Options                         | Pricing Exotic Options: A Quantitative Guide            |
+| 88     | Student-t Distribution                 | Student-t Distribution in Quant Finance                 |
+| 89     | Forecasting Volatility                 | Forecasting Volatility: Models and Methods              |
+| 90     | Career Paths                           | Career Paths in Quantitative Finance                    |
+| 91     | PCA in Finance                         | Principal Component Analysis in Finance                 |
+| 92     | ETF Mechanics                          | ETF Mechanics: Creation and Redemption                  |
+| 93     | Trend Following                        | Trend Following Strategies: A Quantitative Approach     |
+| 94     | Quantitative Momentum                  | Quantitative Momentum: Strategies and Metrics           |
+| 95     | Socially Responsible Investing         | Quantitative Methods in Socially Responsible Investing  |
+| 96     | Risk Parity                            | Understanding Risk Parity in Portfolio Management       |
+| 97     | Commodity Trading                      | Quantitative Models for Commodity Trading               |
+| 98     | Autocorrelation                        | Detecting Autocorrelation in Financial Time Series      |
+| 99     | Machine Learning Series                | Machine Learning in Finance: A Multi-part Series        |
+| 100    | Python for Quant Finance Series        | Python for Quant Finance: A Comprehensive Guide         |
