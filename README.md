@@ -8,6 +8,7 @@ This project automates the Twitter Feed of [QuantPy](https://twitter.com/TheQuan
 ## :pushpin: Current Features
 
 - utilises OpenAI Chat GPT to generate twitter (X) posts from a list of quantitative python ideas with a specific template file
+- develop OpenAI prompt template using Jupyter Notebooks environment for testing response
 - tweets are posted to twitter (using <i>tweepy</i>) every 12 hours with the <i>apscheduler</i> module in python
 - scripts are run using the operating system service and therefore from the command line of our remote server we can: check the status, stop or start the twitter bot service
 - we also have access to the logs generated from the twitter bot
