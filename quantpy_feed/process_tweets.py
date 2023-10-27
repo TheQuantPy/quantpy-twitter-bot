@@ -104,7 +104,7 @@ def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue, text_file: str):
 
             else:
                 final_tweet[key] = short_response[key][:270]
-                logging.info("Value issue with Tweet {key}, too long")
+                logging.info(f"Value issue with Tweet {key}, too long")
 
         quant_tweet_track.tweet = Tweet.from_dict(final_tweet)
         quant_tweet_track.update_gen_status(Boolean.TRUE)
