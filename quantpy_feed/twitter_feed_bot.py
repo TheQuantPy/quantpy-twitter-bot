@@ -27,7 +27,7 @@ APP_DIR = os.path.abspath(os.path.join(CUR_DIR, os.pardir))
 LOG_FILE = os.path.join(APP_DIR, "twitter-bot.log")
 TEXT_FILE = os.path.join(APP_DIR, "data/processed/quants_tweets.txt")
 
-# Load your Twitter and Airtable API keys (preferably from environment variables, config file, or within the railyway app)
+# Load your Twitter API keys
 TWITTER_API_KEY = os.getenv("TWITTER_API_KEY")
 TWITTER_API_SECRET = os.getenv("TWITTER_API_SECRET")
 TWITTER_ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN")
@@ -78,13 +78,6 @@ class TwitterBot:
         generate_tweets(self.llm, self.tweetQueue)
         self.tweetQueue.to_text_file(self.text_file)
 
-    def reply_tweet(self, original_tweet_id: int, tweet_reply: str) -> None:
-        self.twitter_api.update_status(
-            status=tweet_reply,
-            in_reply_to_status_id=original_tweet_id,
-            auto_populate_reply_metadata=True,
-        )
-
     def post_thread(self, tweet: Tweet) -> None:
         tweet_d = asdict(tweet)
         try:
@@ -97,7 +90,7 @@ class TwitterBot:
                         in_reply_to_tweet_id=_last_tweet_id.data["id"],
                     )
                 _last_tweet_id = _tweet_thread
-                logging.info("Sent Status: TRUE. Tweet: {tweet_thread}")
+                logging.info(f"Sent Status: TRUE. Tweet: {tweet_thread}")
             return True
         except Exception as e:
             logging.warning(e)

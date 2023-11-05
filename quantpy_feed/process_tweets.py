@@ -117,9 +117,8 @@ def generate_tweets(llm: ChatOpenAI, tweetQueue: TweetQueue, text_file: str):
 
 def search_next_tweet(tweetQueue: TweetQueue):
     if (
-        len(tweetQueue.tweets_not_generated)
-        == 0 & len(tweetQueue.tweets_ready_for_sending)
-        == 0
+        len(tweetQueue.tweets_not_generated) == 0
+        and len(tweetQueue.tweets_ready_for_sending) == 0
     ):
         logging.warning(ValueError("Need to create more tweet data"))
         raise ValueError("Need to create more tweet data")
